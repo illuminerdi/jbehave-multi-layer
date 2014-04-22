@@ -12,6 +12,19 @@ Then the book is valid
 Given a book with no title or author
 Then the book is not valid
 
+Given a book with no title or author
+When the author is JG Clingenpeel
+When the title is Thomas is Hungry
+Then the book is valid
+
+Given a book with no title or author
+When the author is JG Clingenpeel
+Then the book has this error: [Title must not be null.]
+
+Given a book with no title or author
+When the title is Thomas is Hungry
+Then the book has this error: [Author must not be null.]
+
 Given a book: Bainbrige by JG Clingenpeel
 When the author is null
 Then the book has this error: [Author must not be null.]

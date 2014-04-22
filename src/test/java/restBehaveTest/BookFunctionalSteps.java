@@ -122,6 +122,16 @@ public class BookFunctionalSteps {
         book.setAuthor("");
     }
 
+    @When("the title is $title")
+    public void theTitleIs(String title) {
+        this.book.setTitle(title);
+    }
+
+    @When("the author is $author")
+    public void theAuthorIs(String author) {
+        this.book.setAuthor(author);
+    }
+
     @Then("the book has this error: $errors")
     public void theBookHasTheseErrors(String errors) throws Exception {
         createShouldThrowException();
